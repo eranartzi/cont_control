@@ -1,3 +1,30 @@
 Continous Control project for Udacity DeepRL
 
-To run the project, open Continuous_Control.ipynb and run all the cells
+Introduction:
+
+Reacher ENV solved with continuous control/actions RL methods.
+A double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location.
+
+The goal of the agent is to maintain its position at the target location for as many time steps as possible.
+
+Observation Space:
+
+33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with 4 numbers, corresponding to torque of the two joints. Every entry in the action vector should be a number between -1 and 1.
+
+
+Solving the Environment:
+
+The task is episodic, and in order to solve the environment, the agent must get an average score of +30 over 100 consecutive episodes.
+
+Setting up the environment:
+
+Linux: https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip
+Mac OSX: https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip
+Windows (32-bit): https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip
+Windows (64-bit): https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip
+
+
+Solution:
+To solve the ENV run all the cells in Continuous_Control.ipynb - the solution uses a DDPG model with experience replay
+
+The agent, the deep Q-Network and memory buffer are implemented in the file ddpg_agent.py. The deep learning architectures for both actor and critic are defined in model.py
